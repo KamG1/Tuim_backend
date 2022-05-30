@@ -1,6 +1,8 @@
 package back.demo.gasstations;
 
 
+import back.demo.cars.CarRequest;
+import back.demo.cars.Cars;
 import back.demo.tanks.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -31,6 +33,16 @@ public class GasStationService {
         editedStation.setCostOn(gasstation.getCostOn());
         editedStation.setCostBenz(gasstation.getCostBenz());
         editedStation.setCostLpg(gasstation.getCostLpg());
+    }
+
+    public void addStation(GasStationRequest gasStationRequest) {
+        gasStationRepository.save(requestToGasStationMapper.mapToGasStation(gasStationRequest));
+    }
+
+    public void deleteStation(GasStationRequest gasStationRequest) {
+        Gasstation gasstation = requestToGasStationMapper.mapToGasStation(gasStationRequest);
+        gasStationRepository.deleteById(gasstation.getIdGasStation());
+
     }
 
 }
