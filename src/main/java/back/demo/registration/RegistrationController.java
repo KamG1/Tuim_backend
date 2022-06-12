@@ -1,6 +1,5 @@
 package back.demo.registration;
 
-import back.demo.gasstations.GasStationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

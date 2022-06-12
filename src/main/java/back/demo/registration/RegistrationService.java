@@ -1,15 +1,13 @@
 package back.demo.registration;
 
-import back.demo.user.User;
-import back.demo.user.UserRepository;
+import back.demo.classes.User;
+import back.demo.repositories.UserRepository;
 
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.security.GeneralSecurityException;
 
 
 @Service

@@ -1,7 +1,7 @@
 package back.demo.registration;
 
-import back.demo.user.User;
-import back.demo.user.UserService;
+import back.demo.classes.User;
+import back.demo.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
